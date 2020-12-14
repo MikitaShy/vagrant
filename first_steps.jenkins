@@ -1,26 +1,35 @@
-  
 #!groovy
 // Check ub1 properties
 properties([disableConcurrentBuilds()])
 
 pipeline {
-    agent { 
-        label 'master'
-        }
-    options {
-        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
-        timestamps()
-    }
+
+    agent any
+
     stages {
-        stage("First step") {
+
+        stage( ' Example ' ) {
+
             steps {
-                sh 'ssh root@ub1 \'hostname\''
+
+                echo ' Hello World '   // Это отдельный вызов функции
+
+                script {               // Это скрипт
+
+                    def  browsers = [ ' chrome ' , ' firefox ' ]
+
+                    for  ( int  i = 0 ; i < browsers.size(); ++i) {
+
+                        echo " Testing the ${ browsers[i] }  browser "
+
+                    }
+
+                }
+
             }
+
         }
-        stage("Second step") {
-            steps {
-                sh 'ssh root@ub1 \'uptime\''
-            }
-        }
+
     }
+
 }
