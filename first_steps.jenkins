@@ -1,32 +1,16 @@
 #!groovy
-// Check ub1 properties
-properties([disableConcurrentBuilds()])
 
-pipeline {
+node {
 
-    agent any
+    stage( ' Example ' ) {            // Здесь весь код - это скрипт
 
-    stages {
+        if  (env.BRANCH_NAME == ' master ' ) {
 
-        stage( ' Example ' ) {
+            echo ' I only execute on the master branch '
 
-            steps {
+        } else  {
 
-                echo ' Hello World '   // Это отдельный вызов функции
-
-                script {               // Это скрипт
-
-                    def  browsers = [ ' chrome ' , ' firefox ' ]
-
-                    for  ( int  i = 0 ; i < browsers.size(); ++i) {
-
-                        echo " Testing the ${ browsers[i] }  browser "
-
-                    }
-
-                }
-
-            }
+            echo ' I execute elsewhere '
 
         }
 
