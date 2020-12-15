@@ -13,6 +13,7 @@ pipeline
                 {
 
                     print  "I am alive!"
+                    print  "Hello from GIT"
 
                 }
             }
