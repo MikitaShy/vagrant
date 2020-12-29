@@ -9,14 +9,9 @@ pipeline
         {
             steps 
             { 
-                script 
-                {
-
-                    print  "I am alive!"
-                    print  "Hello from GIT"
-                    print  "Hello Vasili"
-
-                }
+                print  "Hello Vasili"                    
+                sh 'ssh root@18.184.6.52 cd home/ubuntu/project && vagrant up'
+                print  "vagrant is up!!" 
             }
         }
     }
