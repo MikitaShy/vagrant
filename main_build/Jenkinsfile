@@ -10,12 +10,8 @@ pipeline
             steps 
             { 
                 print  "Hello Vasili"
-                
-                sshagent() {
                         sh 'ssh -v root@192.168.9.117'
-                        sh 'cd /root/vagrant && vagrant up'
-                    }
-                
+                        sh 'cd /root/vagrant && vagrant up'                
                 print  "vagrant is up!!" 
             }
         }
