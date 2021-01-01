@@ -10,7 +10,7 @@ pipeline
             steps 
             { 
                 print  "Hello Vasili"
-                        sh 'ssh root@192.168.9.117 apt-get install git -y'               
+                        sh 'ssh root@192.168.9.117 yum install git -y'               
                 print  "vagrant is up!!" 
             }
         }
