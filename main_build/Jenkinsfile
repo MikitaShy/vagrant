@@ -10,8 +10,7 @@ pipeline
             steps 
             { 
                 print  "Hello Vasili"
-                        sh 'ssh -v root@192.168.9.117'
-                        sh 'cd /root/vagrant && vagrant up'                
+                        sh 'ssh -v root@192.168.9.117 ping'               
                 print  "vagrant is up!!" 
             }
         }
