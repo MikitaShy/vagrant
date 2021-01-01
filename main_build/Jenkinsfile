@@ -10,7 +10,7 @@ pipeline
             steps 
             { 
                 print  "Hello Vasili"
-                        sh 'ssh root@192.168.9.117 cd root/vagrant/ && vagrant init'               
+                        sh 'ssh root@192.168.9.117 /bin/sh -c "cd /boot && ls -l"'               
                 print  "vagrant is up!!" 
             }
         }
