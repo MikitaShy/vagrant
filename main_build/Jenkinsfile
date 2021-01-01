@@ -11,7 +11,7 @@ pipeline
             { 
                 print  "Hello Vasili"
                 
-                sshagent(credentials : ['use-the-id-from-credential-generated-by-jenkins']) {
+                sshagent() {
                         sh 'ssh -v root@192.168.9.117'
                         sh 'cd /root/vagrant && vagrant up'
                     }
