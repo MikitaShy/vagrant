@@ -10,7 +10,10 @@ pipeline
             steps 
             { 
                     sh '''#!/bin/bash
-                    echo "hello world" 
+                    echo "bash script is running" 
+                    cd /root/Ansible/playbooks
+                    ansible-playbook playbook1.yml
+                    echo "playbook1 is running" 
                     '''
             }
         }
