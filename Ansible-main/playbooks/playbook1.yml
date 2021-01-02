@@ -28,9 +28,3 @@
   - name: git install
     yum: name=git state=latest
     vars:
-
-  - name: install update
-    yum: name={{item}} state=latest
-    with_items:
-    	    - ssh
-            - python3-pip
