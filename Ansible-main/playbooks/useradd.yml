@@ -1,0 +1,26 @@
+---
+- hosts: all
+  become: yes
+  remote_user: root
+  tasks:
+
+  - name: Добавить пользователя 'Vasiliy'.
+    user:
+      name: Vasiliy
+      password: <хэш пароля пользователя 'Vasiliy'>
+      shell: /bin/bash
+      groups: wheel
+      append: yes
+
+  - name: Создать 2048-битовый SSH ключ для Vasiliy в ~Vasiliy/.ssh/id_rsa
+    user:
+      name: Vasiliy
+      generate_ssh_key: yes
+      ssh_key_bits: 2048
+      ssh_key_file: .ssh/id_rsa
+
+  - name: Установить authorized key из файла id_rsa.pub
+    authorized_key:
+      user: Vasiliy
+      state: present
+      key: "{{ lookup('file', '/home/.ssh/id_rsa.pub') }}"

@@ -1,0 +1,36 @@
+---
+- hosts: all
+
+  tasks:
+  - name: find disk space available.
+    command: df -hPT
+
+  - name: mc install
+    yum: name=mc state=latest
+    vars:
+
+  - name: vim install
+    yum: name=vim state=latest
+    vars:
+
+  - name: curl install
+    yum: name=mc state=latest
+    vars:
+
+  - name: ssh install
+    yum: name=ssh state=latest
+    vars:
+
+  - name: python3-pip install
+    yum: name=python3-pip state=latest
+    vars:
+
+  - name: git install
+    yum: name=git state=latest
+    vars:
+
+  - name: install update
+    yum: name={{item}} state=latest
+    with_items:
+    	    - ssh
+            - python3-pip
