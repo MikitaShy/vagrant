@@ -1,0 +1,6 @@
+---
+- hosts: all
+
+  tasks:
+  - name: Execute the script.
+    command: sh Ansible-main/test.sh
