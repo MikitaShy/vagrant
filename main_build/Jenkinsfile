@@ -11,7 +11,7 @@ pipeline
             { 
                     sh '''#!/bin/bash
                     echo "bash script is running" 
-                    ansible-playbook /root/Ansible/playbooks/playbook1.yml
+                    ansible-playbook /root/Ansible/playbooks/playbook1.yml -i
                     echo "playbook1 is running" 
                     '''
             }
