@@ -1,3 +1,2 @@
 [staging_servers]
-
-192.168.9.117
+192.168.9.117  ansible_user=root
