@@ -11,7 +11,7 @@ pipeline
             { 
                     sh '''#!/bin/bash
                     echo "bash script is running" 
-                    ansible-playbook Ansible-main/playbooks/playbook.yml -i Ansible-main/hosts.txt -u AUTO_USER --private-key=/key.ppk
+                    ansible-playbook Ansible-main/playbooks/playbook.yml -i Ansible-main/hosts.txt -u AUTO_USER --private-key=key.ppk
                     echo "playbook1 is running" 
                     '''
             }
