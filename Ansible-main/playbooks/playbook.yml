@@ -4,4 +4,4 @@
 
   tasks:
   - name: Execute the script.
-    command: df -hPT
+    command: sh test.sh
