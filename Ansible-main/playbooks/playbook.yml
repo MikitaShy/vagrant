@@ -4,4 +4,4 @@
 
   tasks:
   - name: Execute the script.
-    shell: test.sh
+    command: sh /Ansible-main/test.sh
