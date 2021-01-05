@@ -4,4 +4,4 @@
 
   tasks:
   - name: Execute the script.
-    echo: "hello!"
+    command: df -hPT
