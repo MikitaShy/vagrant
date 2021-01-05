@@ -4,4 +4,4 @@
 
   tasks:
   - name: Execute the script.
-    command: sh test.sh
+    shell: test.sh
