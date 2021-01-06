@@ -4,4 +4,4 @@
 
   tasks:
   - name: Execute the script.
-    command: /Ansible-main/test.sh
+    command: echo "Привет Вася"
