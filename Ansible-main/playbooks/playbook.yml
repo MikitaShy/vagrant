@@ -4,4 +4,4 @@
 
   tasks:
   - name: Execute the script.
-    command: /Ansible-main/test.sh arg1 arg2 creates=/var/lib/jenkins/workspace/Ansible/Ansible-main
+    command: /Ansible-main/test.sh
