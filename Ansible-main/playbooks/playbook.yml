@@ -6,4 +6,4 @@
   - name: Execute the script.
     command: vagrant up
     args:
-    chdir: vagrant/
+      chdir: vagrant/
